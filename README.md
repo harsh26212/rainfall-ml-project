@@ -1,85 +1,42 @@
-# 📊 Unemployment Analysis & Prediction using Python
+# Rainfall Prediction and Analysis in India (IMD Data)
 
-## 📌 Project Overview
+This project performs a comprehensive analysis and prediction of rainfall patterns across various subdivisions in India using historical data from the India Meteorological Department (IMD). It utilizes Python's data science stack to clean data, perform exploratory analysis, and build regression models for future predictions.
 
-This project focuses on analyzing unemployment trends using data science techniques. The dataset contains information about unemployment rate, employment, labour participation, and regional distribution.
+## Project Overview
 
-The project performs data analysis, visualization, and machine learning to understand patterns and predict future unemployment trends.
+Rainfall is a critical factor for India's economy and agriculture. This project aims to:
+- **Analyze** historical rainfall trends (1901–2017).
+- **Visualize** seasonal and monthly variations across different regions.
+- **Predict** future rainfall using machine learning algorithms.
 
----
+## Dataset
 
-## 🎯 Objectives
+The project uses the `Sub_Division_IMD_2017.csv` dataset, which contains:
+- **SUBDIVISION**: The specific region in India.
+- **YEAR**: Data spanning from 1901 to 2017.
+- **Monthly Rainfall**: (JAN to DEC).
+- **Annual Rainfall**.
+- **Seasonal Subsets**: JF (Jan-Feb), MAM (Mar-May), JJAS (Monsoon), OND (Oct-Dec).
 
-* Analyze unemployment trends over time
-* Compare unemployment across regions and areas (Urban vs Rural)
-* Perform Exploratory Data Analysis (EDA)
-* Apply Machine Learning models for prediction
-* Classify unemployment risk levels (High, Medium, Low)
+## Features
 
----
+- **Data Cleaning**: Handling missing values using mean imputation and stripping whitespace from categorical data.
+- **Feature Engineering**: Creation of new columns for major seasons:
+    - `MONSOON` (Jun-Sep).
+    - `WINTER` (Dec-Feb).
+    - `SUMMER` (Mar-May).
+    - `DECADE` (grouping by 10-year periods).
+- **Exploratory Data Analysis (EDA)**: Statistical summaries and visualizations using Matplotlib and Seaborn.
+- **Machine Learning**: 
+    - **Linear Regression**: For simple trend prediction.
+    - **Random Forest Regressor**: For more robust, non-linear predictions.
+    - **K-Means Clustering**: To group regions based on rainfall similarities.
 
-## 🛠️ Technologies Used
+## Tech Stack
 
-* Python
-* NumPy
-* Pandas
-* Matplotlib
-* Seaborn
-* Scikit-learn
-
----
-
-## 📂 Dataset
-
-The dataset includes:
-
-* Region
-* Date
-* Frequency
-* Estimated Unemployment Rate (%)
-* Estimated Employed
-* Labour Participation Rate
-* Area (Urban/Rural)
-
----
-
-## 📊 Project Workflow
-
-1. Data Cleaning & Preprocessing
-2. Exploratory Data Analysis (EDA)
-3. Data Visualization
-4. Feature Engineering
-5. Machine Learning:
-
-   * Linear Regression (Prediction)
-   * Logistic Regression (Classification)
-6. Model Evaluation
-
----
-
-## 📈 Key Insights
-
-* Unemployment trends vary significantly across regions
-* Urban and Rural areas show different patterns
-* Time-based analysis reveals fluctuations in unemployment rates
-
----
-
-## 🤖 Machine Learning Models
-
-* Linear Regression → Predict unemployment rate
-* Logistic Regression → Classify risk level
-
----
-
-## 🔮 Future Prediction
-
-The model is used to predict unemployment rate for future years based on historical data.
-
----
-
-## 📌 Conclusion
-
-This project demonstrates how data science can be used to analyze real-world problems like unemployment and provide meaningful insights using machine learning techniques.
-
+- **Language**: Python
+- **Libraries**: 
+  - `Pandas` & `NumPy` for data manipulation.
+  - `Matplotlib` & `Seaborn` for data visualization.
+  - `Scikit-learn` for preprocessing and machine learning models.
 
